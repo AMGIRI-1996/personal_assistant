@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  app:
+    build: ./assistant/
+    volumes:
+      - .assistant/src:/app
+    ports:
+      - "1234:1234"
+    environment:
+      - PORT=1234
+    
